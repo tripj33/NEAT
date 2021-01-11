@@ -38,7 +38,8 @@ collections:
         name: "test obj"
         widget: "list"
         file: "src/_data/settings.yaml"
-        collapsed: true
+        collapsed: false
+        label_singular: "add item"
         fields:
            - { label: Title, name: text, widget: string }
            - { label: URL, name: url, widget: string }
@@ -79,3 +80,19 @@ collections:
           - { label: Name, name: name, widget: string }
           - { label: Author, name: author, widget: string }
           - { label: URL, name: url, widget: string }
+
+  - label: "All Widgets"
+    name: "allWidgets"
+    files:
+      - label: "blogPost"
+        name: "blogPost"
+        files:
+          - label: "Blog Post Hero Image"
+            name: "blogPostHeroImage"
+            widget: "list"
+            file: "src/_data/settings.yaml"
+            fields: 
+              - { label: Hero Image, name: heroImage, widget: image, options:[media_folder: "../blog/images"]}
+              - { label: Image Title, name: imageTitle, widget: string }
+
+        
