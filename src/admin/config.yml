@@ -34,7 +34,7 @@ collections:
   - label: "test"
     name: "test"
     files:
-      - labe: "Test Obj"
+      - label: "Test Obj"
         name: "test obj"
         widget: "list"
         collapsed: true
