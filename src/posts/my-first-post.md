@@ -14,6 +14,8 @@ tags:
 
 ## This is a Heading h2
 
+![Test](/static/img/cps-logo-2019-7-.png "test")
+
 ###### This is a Heading h6
 
 ## Emphasis
