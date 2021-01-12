@@ -84,15 +84,13 @@ collections:
   - label: "All Widgets"
     name: "allWidgets"
     files:
-      - label: "blogPost"
-        name: "blogPost"
-        files:
-          - label: "Blog Post Hero Image"
-            name: "blogPostHeroImage"
-            widget: "list"
-            file: "src/_data/settings.yaml"
-            fields: 
-              - { label: Hero Image, name: heroImage, widget: image}
-              - { label: Image Title, name: imageTitle, widget: string }
+      - label: "Blog Post Hero Image"
+        name: "blogPostHeroImage"
+        widget: "list"
+        file: "src/_data/settings.yaml"
+        fields: 
+          - { label: Hero Image, name: heroImage, widget: image}
+          - { label: Image Title, name: imageTitle, widget: string }
+          
 
         
