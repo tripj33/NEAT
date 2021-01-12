@@ -88,7 +88,8 @@ collections:
         name: "blogPostHeroImage"
         widget: "list"
         file: "src/_data/settings.yaml"
-        summary: 
+        minimized_collapsed: true
+        allow_add: true
         fields: 
           - label: Hero Image
             name: heroImage
