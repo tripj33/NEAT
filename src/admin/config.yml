@@ -92,7 +92,7 @@ collections:
             widget: "list"
             file: "src/_data/settings.yaml"
             fields: 
-              - { label: Hero Image, name: heroImage, widget: image, options:[media_folder: "../blog/images"]}
+              - { label: Hero Image, name: heroImage, widget: image}
               - { label: Image Title, name: imageTitle, widget: string }
 
         
