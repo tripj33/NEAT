@@ -90,6 +90,7 @@ collections:
         file: "src/_data/settings.yaml"
         minimized_collapsed: true
         allow_add: true
+        collapsed: true
         fields: 
           - label: Hero Image
             name: heroImage
