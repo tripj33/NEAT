@@ -10,6 +10,28 @@
         <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
         <script>
 CMS.registerEditorComponent({
+  id: 'definition',
+  label: 'Definition',
+  fields: [
+    { name: 'text', label: 'Text', widget: 'string' },
+    { name: 'definition', label: 'Definition', widget: 'string' },
+  ],
+  pattern: /^\*\[(.*?)\]: (.*?)$/,
+  fromBlock: function(match) {
+    return {
+      text: match[1],
+      definition: match[2],
+    };
+  },
+  toBlock: function(obj) {
+    return '*[' + obj.text + ']: ' + obj.definition;
+  },
+  toPreview: function(obj) {
+    return '*[' + obj.text + ']: ' + obj.definition;
+  },
+});
+
+CMS.registerEditorComponent({
   // Internal id of the component
   id: "youtube",
   // Visible label
