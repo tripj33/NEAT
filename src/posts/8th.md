@@ -15,3 +15,5 @@ content undefined
  This is a Heading h2
 
  web site is using `markedjs/marked`.
+
+*[Better]: more gooder
