@@ -4,7 +4,7 @@ description: Capitalize on low hanging fruit to identify a ballpark value added
   activity to beta test. Override the digital divide with additional
   clickthroughs from DevOps.
 author: Surjith S M
-date: 2021-01-11T21:30:13.595Z
+date: January 12th 2021
 tags:
   - left
   - center
