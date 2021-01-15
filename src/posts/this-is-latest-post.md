@@ -4,7 +4,7 @@ description: Bring to the table win-win survival strategies to ensure proactive
   domination. At the end of the day, going forward, a new normal that has
   evolved from generation X is on the runway heading towards a streamlined cloud
   solution.
-date: 2020-09-23T15:13:13.021Z
+date: 2020-09-23
 author: Surjith S M
 tags: second-tag
 ---
