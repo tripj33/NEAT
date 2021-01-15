@@ -27,7 +27,9 @@ body pre[class*="language-"] {
 @media screen and (max-width: 640px) {
 .article-post{
   @apply -mt-36 absolute;
-
+  article{
+   @apply sm:w-10/12 my-4 mx-auto bg-white rounded p-8 bg-white z-10;
+  }
   &_date{
     @apply text-gray-400
   }
