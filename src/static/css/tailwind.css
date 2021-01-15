@@ -29,7 +29,7 @@ body pre[class*="language-"] {
   @apply -mt-36 absolute;
 
   &_date{
-    @apply color-gray-400
+    @apply text-gray-400
   }
 }
 
