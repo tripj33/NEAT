@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwind/base.css";
+@import "tailwind/components.css";
+@import "tailwind/utilities.css";
+
+@import "./components.css";
 
 /*Your Custom CSS Goes here*/
 
@@ -17,4 +19,18 @@ h3 {
 body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
+}
+
+
+
+
+@media screen and (max-width: 640px) {
+.article-post{
+  @apply -mt-36 absolute;
+
+  &_date{
+    @apply color-gray-400
+  }
+}
+
 }

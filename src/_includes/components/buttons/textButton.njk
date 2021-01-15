@@ -1,0 +1,8 @@
+{% macro textButton(link, text, buttonClass) %}
+    <a href="{{ link }}">
+        <button class="{{buttonClass}} text-cps-orange bg-transparent border border-solid border-cps-orange hover:bg-cps-orange hover:text-white active:bg-cps-orange font-bold uppercase text-xs px-4 py-2 rounded outline-none focus:outline-none mr-1 mb-1" type="button" style="transition: all .15s ease">
+
+            {{ text }}
+        </button>
+    </a>
+{% endmacro %}

@@ -28,6 +28,9 @@ module.exports = function (eleventyConfig) {
 
   // Add Tailwind Output CSS as Watch Target
   eleventyConfig.addWatchTarget("./_tmp/static/css/style.css");
+  eleventyConfig.addWatchTarget("./src");
+
+
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
