@@ -17,14 +17,25 @@ prism: true
 
     </div> #}
 <div class="article-bannerImage">
-    <img src="https://i.picsum.photos/id/402/700/400.jpg?hmac=4bKn3IhhvJpOLgfVMcQjJzs2hhnrkKJRj7DOfdE_jhc" alt="">
+    <img src="http://picsum.photos/1000/500" alt="">
 </div>
 
-<div class="article-post">
+<main class="article-post">
+    <aside>
+       <div class="sidebar">
+           Quick Links
+       </div>
+    </aside>
     <article>
-        {{textButton('http://google.com', 'Google')}}
-        <h2 class="text-4xl mb-8">{{ title }}</h2>
-        <span class="article-post_date"><i class="far fa-calendar-alt pr-2"></i>{{ date | readableDate }}</span>
+        
+        <div class="article-post_info">
+            {{textButton('http://google.com', 'Google')}}    
+            <h2 class="article-post_info_title">{{ title }}</h2>
+            <div class="article-post_info_meta">
+                <span class="article-post_info_meta_date"><i class="far fa-calendar-alt"></i>{{ date | readableDate }}</span>
+                <span class="article-post_info_meta_author"><i class="far fa-user"></i>{{ author }}</span>
+            </div>
+        </div>
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui id ornare arcu odio ut sem nulla. Ipsum dolor sit amet consectetur adipiscing elit. Dignissim convallis aenean et tortor. Curabitur vitae nunc sed velit. Porttitor eget dolor morbi non arcu risus quis varius quam. Nibh tellus molestie nunc non blandit. Sed vulputate odio ut enim blandit volutpat. Risus quis varius quam quisque. Magna eget est lorem ipsum dolor.</p>
         <p>In est ante in nibh mauris cursus. Euismod elementum nisi quis eleifend quam. Est ullamcorper eget nulla facilisi. A condimentum vitae sapien pellentesque habitant morbi. Enim nunc faucibus a pellentesque sit amet porttitor eget. At urna condimentum mattis pellentesque id. A pellentesque sit amet porttitor eget dolor morbi non arcu. Cursus euismod quis viverra nibh cras pulvinar mattis. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Vestibulum morbi blandit cursus risus at ultrices. Sagittis eu volutpat odio facilisis mauris sit amet. Tellus orci ac auctor augue mauris. Nunc id cursus metus aliquam eleifend mi.</p>
         <p>
@@ -35,4 +46,4 @@ Ut aliquam purus sit amet luctus venenatis. Bibendum enim facilisis gravida nequ
 
         <p>Massa massa ultricies mi quis hendrerit dolor magna. Tellus mauris a diam maecenas sed enim. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Dictum non consectetur a erat nam at lectus urna. Diam maecenas ultricies mi eget mauris pharetra et. Dolor sed viverra ipsum nunc aliquet bibendum enim. Aliquam sem et tortor consequat id porta nibh venenatis. Nulla malesuada pellentesque elit eget. Morbi leo urna molestie at elementum eu facilisis sed. Consectetur adipiscing elit ut aliquam. Auctor neque vitae tempus quam. Eros in cursus turpis massa tincidunt. Libero volutpat sed cras ornare arcu dui vivamus. Sit amet facilisis magna etiam tempor. Facilisis magna etiam tempor orci. Faucibus et molestie ac feugiat sed lectus. Ultrices gravida dictum fusce ut. In cursus turpis massa tincidunt. Euismod in pellentesque massa placerat duis ultricies lacus sed.</p>
         {{ content | safe }}</article>
-</div>
+</main>

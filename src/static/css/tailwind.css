@@ -24,15 +24,63 @@ body pre[class*="language-"] {
 
 
 
-@media screen and (max-width: 640px) {
-.article-post{
-  @apply -mt-36 absolute;
-  article{
-   @apply sm:w-10/12 my-4 mx-auto bg-white rounded p-8 bg-white z-10;
-  }
-  &_date{
-    @apply text-gray-400
+@media screen and (min-width: 640px) {
+main.article-post{
+    @apply flex justify-center h-full w-full;
+
+    aside{
+      @apply hidden;
+    }
+
+    article{
+    @apply -mt-36 absolute flex flex-col justify-center w-10/12 my-4 bg-white rounded-lg p-8 bg-white z-10;
+
+    p{
+      @apply leading-relaxed pb-4;
+    }
+
+
+    .article-post_info{
+      @apply flex flex-col justify-start;
+
+      &_title{
+        @apply text-4xl my-4 font-bold capitalize;
+      }
+
+      &_meta{
+        @apply flex flex-row justify-start mb-4;
+
+        span {
+          @apply text-gray-600 pr-4;
+        }
+
+        i{
+          @apply pr-2 text-gray-700;
+        }
+      }
+
+    }
+
+
+    }
   }
 }
 
+@media screen and (min-width: 768px) {
+  main.article-post{
+    @apply flex flex-row;
+
+    aside{
+      @apply flex w-1/4  h-40 bg-gray-300 rounded-r-lg sticky mt-24 top-24;
+      .sidebar{
+        @apply p-4 font-bold capitalize;
+      }
+    }
+
+    article{
+      @apply relative mt-0 w-3/4;
+    }
+
+
+  }
 }
