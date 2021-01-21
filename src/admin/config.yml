@@ -34,7 +34,7 @@ collections:
     files:
       - label: "Residential Services"
         name: "residential_services"
-        folder: "src/_data/services/residential_services/residential_services.yaml"
+        file: "src/_data/services/residential_services/residential_services.yaml"
         create: true
         fields:
           - { label: "Service Name", name: "service_name", widget: "string" }
