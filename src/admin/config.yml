@@ -31,7 +31,6 @@ collections:
   
   - label: "Residential Services"
     name: "reisdential_services"
-
     files:
       - label: "Residential Services"
         name: "residential_services"
