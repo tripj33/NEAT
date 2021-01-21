@@ -139,7 +139,6 @@
 
 
 @media screen and (min-width: 1024px){
-    [x-clock]{}
 
     header{
         
@@ -210,12 +209,12 @@
 
                 ul.navigation{
                     @apply 
-                        flex
                         px-4
                         h-full
                         content-center
                         justify-center
-                        items-center;
+                        items-center
+                        flex;
                     
                     li{
                         @apply 

@@ -29,18 +29,18 @@ collections:
         create: true
         options: ["Tags", "created", "from", "config.yml"]
   
-  - label: "test"
-    name: "test"
+  - label: "Residential Services"
+    name: "reisdential_services"
+
     files:
-      - label: "Test Obj"
-        name: "test obj"
-        widget: "list"
-        file: "src/_data/settings.yaml"
-        collapsed: false
-        label_singular: "add item"
+      - label: "Residential Services"
+        name: "residential_services"
+        folder: "src/services/residential_services"
+        create: true
         fields:
-           - { label: Title, name: text, widget: string }
-           - { label: URL, name: url, widget: string }
+          - { label: "Service Name", name: "service_name", widget: "string" }
+          - { label: "Service Images", name: "service_images", widget: "image", media_folder: "src/services/residential_services/images"}
+          - { label: "Service Description", name: "service_description", widget: "mardown"}
 
   - label: "Settings"
     name: "settings"
