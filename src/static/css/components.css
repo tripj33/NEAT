@@ -1,2 +1,4 @@
 @import "../../_includes/blog.css";
 @import "../../_includes/posts.css";
+@import "../../_includes/components/header/header.css";
+@import "../../_includes/components/header/hamburger.css";

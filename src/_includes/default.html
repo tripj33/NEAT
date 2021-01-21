@@ -11,15 +11,17 @@
       <meta name="description" content="{{description}}"/> 
     {% endif %}
     {% block head %}{% endblock %}
+    
     <link rel="stylesheet" type="text/css" href="/static/css/style.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/components.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     {% if prism == true %}
       <link rel="stylesheet" type="text/css" href="/static/css/prism-tomorrow.css">
     {% endif %}
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
   </head>
   <body>
-    {% include "./partials/navbar.html" %}
+    {% include "./components/header/header.njk" %}
 
     {{ content | safe }}
 

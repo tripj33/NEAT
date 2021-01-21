@@ -30,15 +30,15 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./_tmp/static/css/style.css");
 
 //   eleventyConfig.addWatchTarget("./_includes/*.css");
-// eleventyConfig.setWatchThrottleWaitTime(2500);
+// eleventyConfig.setWatchThrottleWaitTime(5000);
 
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
-    "./_tmp/static/css/style.css": "./static/css/style.css",
+    // "./_tmp/static/css/style.css": "./static/css/style.css",
     "./src/admin/config.yml": "./admin/config.yml",
     "./node_modules/alpinejs/dist/alpine.js": "./static/js/alpine.js",
-    "./node_modules/prismjs/themes/prism-tomorrow.css":
-      "./static/css/prism-tomorrow.css",
+    // "./node_modules/prismjs/themes/prism-tomorrow.css":
+    //   "./static/css/prism-tomorrow.css",
   });
 
   // Copy Image Folder to /_site

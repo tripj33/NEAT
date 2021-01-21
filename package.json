@@ -4,7 +4,7 @@
     "eleventy": "eleventy --watch --serve",
     "debug": "set DEBUG=* & eleventy",
     "watch:css": "watch \"npm run css\" ./src",
-    "css": "postcss src/static/css/tailwind.css --o _site/static/css/style.css --watch",
+    "css": "postcss --verbose src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "watch": "nodemon --watch ./src --ext css --exec npm run css",
     "build": "cross-env NODE_ENV=production eleventy &&npm cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css"
   },
