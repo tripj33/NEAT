@@ -39,7 +39,7 @@ collections:
         fields:
           - { label: "Service Name", name: "service_name", widget: "string" }
           - { label: "Service Images", name: "service_images", widget: "image", media_folder: "src/services/residential_services/images"}
-          - { label: "Service Description", name: "service_description", widget: "mardown"}
+          - { label: "Service Description", name: "service_description", widget: "markdown"}
 
   - label: "Settings"
     name: "settings"
