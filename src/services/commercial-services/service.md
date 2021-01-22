@@ -1,6 +1,6 @@
 ---
 title: service
 description: this is a description
-service-images: static/img/beach.svg
+service-images: ../../static/img/beach.svg
 ---
 fsdfgsfdserawfssgeafwsgdbsre
