@@ -28,6 +28,15 @@ collections:
         multiple: true
         create: true
         options: ["Tags", "created", "from", "config.yml"]
+
+  - label: "Commercial Services"
+    name: "commercial-services"
+    folder: "src/services/commercial-services"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown"}
   
   - label: "Residential Services"
     name: "reisdential-services"
