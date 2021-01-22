@@ -31,7 +31,7 @@ collections:
   
   - label: "Residential Services"
     name: "reisdential_services"
-    folder: "src/services/residential"
+    folder: "src/services/residential-services"
     files:
       - label: "Residential Services"
         name: "residential-services"
