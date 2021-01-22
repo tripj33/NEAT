@@ -3,7 +3,7 @@ title: Services
 layout: default
 ---
 
-{% from "./components/buttons.njk" import square-with-icon with content%}
+{%  import "./components/buttons.njk" as button%}
 
 <section class="service">
     <div class="title">
@@ -17,7 +17,7 @@ layout: default
     </div>
 
     <div class="service_buttons">
-        {{ buttons.square-with-icons('test')}}
+        {{ button.square-with-icons('test')}}
         <button></button>
     </div>
 
