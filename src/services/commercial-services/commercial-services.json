@@ -1,6 +1,3 @@
 {
-    "layout": "services",
-    "tags": [
-        "post"
-    ]
+    "layout": "services"
 }
