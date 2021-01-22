@@ -1,6 +1,6 @@
 ---
 title: service
 description: this is a description
-service-images: src/services/commercial-services/images/camper.svg
+service-images: https://www.netlifycms.org/static/netlify-cms-logo-5a5d3304b7d2d77ea281363a71dcc970.svg
 ---
 fsdfgs
