@@ -31,15 +31,12 @@ collections:
   
   - label: "Residential Services"
     name: "reisdential-services"
-    files:
-      - label: "Residential Services"
-        name: "residential-services"
-        file: "src/_data/services/residential-services/residential-services.yaml"
-        create: true
-        fields:
-          - { label: "Service Name", name: "service_name", widget: "string" }
-          - { label: "Service Images", name: "service_images", widget: "image", media_folder: "src/services/residential-services/images"}
-          - { label: "Service Description", name: "service_description", widget: "markdown"}
+    folder: "src/services/residential-services"
+    fields:
+        - { label: "Service Name", name: "service_name", widget: "string" }
+        - { label: "Service Images", name: "service_images", widget: "image", media_folder: "src/services/residential-services/images"}
+        - { label: "Service Description", name: "service_description", widget: "markdown"}
+          
 
   - label: "Settings"
     name: "settings"
