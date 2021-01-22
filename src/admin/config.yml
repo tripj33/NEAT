@@ -30,8 +30,7 @@ collections:
         options: ["Tags", "created", "from", "config.yml"]
   
   - label: "Residential Services"
-    name: "reisdential_services"
-    folder: "src/services/residential-services"
+    name: "reisdential-services"
     files:
       - label: "Residential Services"
         name: "residential-services"
