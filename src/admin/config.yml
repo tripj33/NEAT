@@ -32,6 +32,7 @@ collections:
   - label: "Residential Services"
     name: "reisdential-services"
     folder: "src/services/residential-services"
+    create: true
     fields:
         - { label: "Service Name", name: "service_name", widget: "string" }
         - { label: "Service Images", name: "service_images", widget: "image", media_folder: "src/services/residential-services/images"}
