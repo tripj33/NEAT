@@ -46,7 +46,7 @@ collections:
     create: true
     fields:
         - { label: "Service Name", name: "service_name", widget: "string" }
-        - { label: "Service Images", name: "service_images", widget: "image", media_folder: "src/services/residential-services/images"}
+        - { label: "Service Images", name: "service_images", widget: "image"}
         - { label: "Service Description", name: "service_description", widget: "markdown"}
           
 
