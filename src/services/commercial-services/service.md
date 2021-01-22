@@ -1,6 +1,6 @@
 ---
 title: service
 description: this is a description
-service-images: images/residential.png
+service-images: static/img/residential.png
 ---
 fsdfgsfdserawfssgeafwsgdbsre
