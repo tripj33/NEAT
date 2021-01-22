@@ -3,10 +3,29 @@ title: Services
 layout: default
 ---
 
-<div class="container max-w-3xl mt-40 px-6">
+<!-- <div class="container max-w-3xl mt-40 px-6">
 
     <h1 class="font-bold text-5xl">{{title}} 0 asd</h1>
 
     {{ content | safe }}
 
-</div>
+</div> -->
+{% from "./components/buttons.njk" import square-with-icon%}
+
+<section class="service">
+    <div class="title">
+        <h2>{{title}}</h2>
+    </div>
+    <div class="service_image">
+        <img src="{{service_images}}" alt="">
+    </div>
+    <div class="service_description">
+
+    </div>
+
+    <div class="service_buttons">
+        {{ buttons.square-with-icons('test')}}
+        <button></button>
+    </div>
+
+</section>
