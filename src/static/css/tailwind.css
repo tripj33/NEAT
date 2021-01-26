@@ -20,7 +20,7 @@ body :not(pre) > code[class*="language-"],
 body pre[class*="language-"] {
   @apply bg-gray-800;
 }
-
+/* 
 ::-moz-selection { @apply text-white bg-cps-orange; }
 ::selection { @apply text-white bg-cps-orange;}
-
+ */
