@@ -32,13 +32,12 @@ collections:
   - label: "Commercial Services"
     name: "commercial-services"
     folder: "src/services/commercial-services"
-    slug: "{{slug}}"
+    slug: "{{title}}"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "URL", name: "slug", widget: "string"}
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Service Images", name: "image", widget: "image", media_folder: "/static/img"}
+      - { label: "Service Images", name: "image", widget: "image", media_folder: "_site/static/img"}
       - { label: "Body", name: "body", widget: "markdown"}
   
 
