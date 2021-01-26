@@ -3,7 +3,7 @@ title: Backflow Device Testing
 slug: test2
 description: A functioning backflow preventer is imperative to keeping the
   public health safe.
-image: /static/img/807-536x354.jpg
+image: /src/static/img/watts_rpz_backflow_preventer.png
 ---
 
 
