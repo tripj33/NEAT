@@ -153,12 +153,12 @@
                 }
 
                 .service-image{
-                    /* @apply 
+                    @apply 
                         h-auto
                         pt-4
                         flex
                         items-start
-                        w-full; */
+                        w-full;
 
                     img{
                         @apply w-full;
