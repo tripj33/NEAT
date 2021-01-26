@@ -32,6 +32,7 @@ module.exports = function (eleventyConfig) {
 //   eleventyConfig.addWatchTarget("./_includes/*.css");
 // eleventyConfig.setWatchThrottleWaitTime(5000);
 
+
   // Copy Static Files to /_Site
   eleventyConfig.addPassthroughCopy({
     // "./_tmp/static/css/style.css": "./static/css/style.css",
