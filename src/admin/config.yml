@@ -5,7 +5,7 @@ backend:
   ### enable below lines for github integration ###
   # name: github
   # repo: surjithctly/neat-starter
-media_folder: "src/static/img"
+media_folder: "/static/img"
 # public_folder: "/static/img"
 
 # Please run "npx netlify-cms-proxy-server" for local backend
