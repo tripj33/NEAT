@@ -3,7 +3,7 @@ title: Backflow Device Testing
 slug: backflow-device-testing
 description: A functioning backflow preventer is imperative to keeping the
   public health safe.
-image: src/static/img/822-536x354.jpg
+image: /static/img/822-536x354.jpg
 ---
 
 
