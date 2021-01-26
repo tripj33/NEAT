@@ -178,15 +178,7 @@
                     @apply flex flex-col w-full;
 
                     button{
-                    @apply w-full;
-                    
-                        &:first-child{
-                            @apply mr-0;
-                        }
-
-                        &:nth-child(2){
-                            @apply ml-0
-                        }
+                    @apply w-full m-0;
 
                     }
 
