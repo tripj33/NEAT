@@ -37,7 +37,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Service Images", name: "image", widget: "image", media_folder: "_site/static/img"}
+      - { label: "Service Images", name: "image", widget: "image", media_folder: "src/static/img"}
       - { label: "Body", name: "body", widget: "markdown"}
   
 
