@@ -5,25 +5,58 @@ layout: default
 
 {% import "./components/buttons.html" as button %}
 
-<div class="container max-w-3xl mt-40 px-6">
-
-    <h1 class="font-bold text-5xl">{{title}} 0 asd</h1>
-    {{button.square_with_icon('test')}}
-    {{ content | safe }}
-
-</div>
 
 
 <div class="service">
-    <div class="service-title">
-        <h2>{{title}}</h2>
+    <div class="service-left">
+        <div class="service-image">
+            <img src="{{image}}" alt="">
+        </div>
     </div>
-    <div class="service-images">
-        <img src="{{image}}" alt="">
+    <div class="service-right">
+        <div class="service-title">
+            <h2>{{title}}</h2>
+        </div>
+        <div class="service-details">
+            <div>
+                Includes Something here
+            </div>
+        </div>
+        <div class="service-buttons">
+            {{button.square_with_icon('Ask A Question', 'cps-orange', 'cps-orange-dark', 'far fa-question-circle')}}
+            {{button.square_with_icon('Schedule Service', 'cps-blue', 'cps-blue-dark', 'far fa-calendar-plus')}}
+        </div>
+        <div class="service-icons">
+            <div class="icon">
+                <i class="fal fa-lightbulb-dollar"></i>
+                <div class="title">Energy Efficient</div>
+            </div>
+            <div class="icon">
+                <i class="fad fa-check"></i>
+                <div class="title">3 Year Warranty</div>
+            </div>
+            <div class="icon">
+                <i class="fad fa-rabbit"></i>
+                <div class="title">Quick Installation</div>
+            </div>
+        </div>
+        <div class="service-description">
+            <div class="service-description-info">
+                <h4>Service Description:</h4>
+                <div>
+                    {{description}}      
+                </div>
+                <h4>What This Service Includes:</h4>
+                <ul>
+                    <li>This is something that will be included.</li>
+                    <li>Another things that is included with this service is this thing</li>
+                    <li>What you get here is that last item that you will likely receive.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <div class="service-description">
-        {{description}}
-        {{image}}
-    </div>
+
+    
+    
 
 </div>
