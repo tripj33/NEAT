@@ -155,7 +155,12 @@
                         h-auto
                         pt-4
                         flex
-                        items-start;
+                        items-start
+                        w-full;
+
+                    img{
+                        @apply w-full;
+                    }
                 }
            }
 
