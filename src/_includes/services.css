@@ -153,8 +153,8 @@
                 }
 
                 .service-image{
-                    @apply 
-                        /* h-auto
+                    /* @apply 
+                        h-auto
                         pt-4
                         flex
                         items-start
