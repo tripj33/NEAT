@@ -27,10 +27,10 @@
         }
 
         .service-image{
-            @apply flex justify-center items-center h-auto;
+            @apply flex justify-center items-center h-auto w-full;
 
             img{
-                @apply h-auto w-auto;
+                @apply h-auto w-full;
             }
 
         }
