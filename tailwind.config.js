@@ -340,7 +340,7 @@ module.exports = {
           800: '#4e342e',
           900: '#3e2723',
         },
-        'cps': {
+        cps: {
           'orange': '#e05826',
           'orange-dark': '#dc5022',
           'blue': '#0c3556',
