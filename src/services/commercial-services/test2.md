@@ -1,5 +1,6 @@
 ---
 title: Backflow Device Testing
+slug: backflow-device-testing
 description: A functioning backflow preventer is imperative to keeping the
   public health safe.
 image: /static/img/watts_rpz_backflow_preventer.png
