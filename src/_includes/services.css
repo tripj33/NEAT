@@ -147,7 +147,7 @@
            .service-left{
                @apply 
                     flex
-                    w-2/12;
+                    w-7/12;
                 .service-title{
                     @apply text-5xl;
                 }
@@ -157,8 +157,8 @@
                         h-auto
                         pt-4
                         flex
-                        items-start
-                        w-full;
+                        items-start;
+                        width: 100%;
 
                     img{
                         @apply w-full;
