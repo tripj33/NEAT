@@ -147,7 +147,7 @@
            .service-left{
                @apply 
                     flex
-                    w-7/12;
+                    w-2/12;
                 .service-title{
                     @apply text-5xl;
                 }
