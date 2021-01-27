@@ -45,6 +45,23 @@
             button{
                 @apply my-2;
 
+                &:first-child{
+                    @apply 
+                    bg-cps-orange;
+
+                    &:hover{
+                        @apply bg-cps-orange-dark
+                    }
+                }
+
+                &:nth-child(2){
+                    @apply 
+                    bg-cps-blue;
+
+                    &:hover{
+                        @apply bg-cps-blue-dark
+                    }
+                }
                 
             }
         }
