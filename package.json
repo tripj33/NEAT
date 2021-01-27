@@ -6,7 +6,7 @@
     "watch:css": "watch \"npm run css\" ./src",
     "css": "postcss --verbose src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "watch": "nodemon --watch ./src --ext css --exec npm run css",
-    "build": "cross-env NODE_ENV=production eleventy cross-env NODE_ENV=production postcss --verbose src/static/css/tailwind.css --o _site/static/css/style.css"
+    "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production postcss src/static/css/tailwind.css --o _site/static/css/style.css"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
