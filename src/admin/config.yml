@@ -40,7 +40,7 @@ collections:
       - { label: "Snippet", name: "snippet", widget: "string"}
       - { label: "Description", name: "description", widget: "markdown"}
       - { label: "Service Images", name: "image", widget: "image"}
-      - widget: "list"
+      - widget: list
         label: "What This Service Includes" 
         name: "serviceIncludes"
         label_singular: "Add Service Feature"
