@@ -1,12 +1,11 @@
 
     .service{
-        @apply flex justify-center flex-col mt-24 px-6 container;
+        @apply flex justify-center flex-col mt-24 px-6 container ml-auto mr-auto;
 
         .service-title{
             @apply 
                 flex 
-                h-16 
-                text-4xl 
+                text-3xl 
                 font-bold 
                 text-cps-blue 
                 capitalize 
@@ -27,7 +26,7 @@
         }
 
         .service-image{
-            @apply flex justify-center items-center h-auto w-full;
+            @apply flex justify-center items-center h-auto w-full pt-4;
 
             img{
                 @apply h-auto w-full;
@@ -110,6 +109,8 @@
                             list-disc
                             py-2;
                     }
+
+                 
                 }
             }
         }
@@ -152,6 +153,7 @@
                 mt-4
                 flex
                 flex-row;
+                max-width: 100%;
 
                 .service-image{
                     @apply p-0;
@@ -202,7 +204,7 @@
                     @apply flex flex-col w-full;
 
                     button{
-                    @apply w-full m-0;
+                    @apply w-full my-3 mx-0;
 
                     }
 

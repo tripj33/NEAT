@@ -7,41 +7,41 @@ module.exports = {
   ],
   theme: {
     extend: {
-       
+
       animation: {
-          menu_fade_in: 'menu_fade_in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
-          menu_fade_out: 'menu_fade_out 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
-          menu_reveal: 'menu_reveal 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
-          menu_hide: 'menu_hide 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
-          slide_in_right: 'slide_in_right 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
-          slide_out_right: 'slide-out-right 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both'
-          
+        menu_fade_in: 'menu_fade_in .3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both',
+        menu_fade_out: 'menu_fade_out 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        menu_reveal: 'menu_reveal 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        menu_hide: 'menu_hide 0.3s cubic-bezier(0.550, 0.085, 0.680, 0.530) both',
+        slide_in_right: 'slide_in_right 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        slide_out_right: 'slide_out_right 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both'
+
       },
       keyframes: {
-          menu_fade_in: {
-            '0%': {  opacity: '0'},
-            '100%': {opacity: '1'}
-          },
-          menu_fade_out: {
-              '0%':{opacity: '1'},
-              '100%':{opacity: '0'}
-          },
-          menu_reveal: {
-              '0%': {opacity: '0', transform: 'translateY(-500px)'},
-              '100%': {opacity: '1', transform: 'translateY(0px)'}
-          },
-          menu_hide: {
-              '0%':{opacity: '1', transform: 'translateY(0px)'},
-              '100%':{opacity: '0', transform: 'translateY(-500px)'}
-          },
-          slide_in_right: {
-              '0%' :{transform: 'translateX(500px)'},
-            '100%' :{transform: 'translateX(0)'}
-          },
-          slide_out_right: {
-              '0%': {transform: 'translateX(0)', opacity: '1'},
-            '100%': {transform: 'translateX(500px)', opacity: '0'}
-          }
+        menu_fade_in: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        menu_fade_out: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' }
+        },
+        menu_reveal: {
+          '0%': { opacity: '0', transform: 'translateY(-500px)' },
+          '100%': { opacity: '1', transform: 'translateY(0px)' }
+        },
+        menu_hide: {
+          '0%': { opacity: '1', transform: 'translateY(0px)' },
+          '100%': { opacity: '0', transform: 'translateY(-500px)' }
+        },
+        slide_in_right: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' }
+        },
+        slide_out_right: {
+          '0%': { transform: 'translateX(0)', opacity: '1' },
+          '100%': { transform: 'translateX(100%)', opacity: '0' }
+        }
 
       },
       fontFamily: {
@@ -363,7 +363,7 @@ module.exports = {
       boxShadow: {
         outline: '0 0 0 3px rgba(101, 31, 255, 0.4)',
       },
-     
+
     },
   },
   variants: {

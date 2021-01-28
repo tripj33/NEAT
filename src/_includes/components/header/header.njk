@@ -1,24 +1,4 @@
-<!-- <header x-data="{ active: false }">
-    <div class="header-content" >
-        <div class="spacer"></div>
-        <div class="logo"><img src="/static/img/CPS Logo - 2021 - Small.png" alt="Chicagoland Plumbing Services, Inc."></div>
-        <div class="hamburger-menu" >
-            <button x-on:click="active = !active" x-bind:class="active === true ? 'is-active' : ''" class="hamburger hamburger--squeeze" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>  
-        </div>
-    </div>
-    <nav  class="dropdown" x-bind:class="active === true ? 'animate-menu_fade_in' : 'animate-menu_fade_out invisible'">
-            <ul>
-                <li><a href="#">Services</a></li>
-                <li><a href="">Service</a></li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Specials</a></li>
-            </ul>
-        </nav>
-</header> -->
+<!-- <header x-data="{ active: false }"> <div class="header-content" > <div class="spacer"></div> <div class="logo"><img src="/static/img/CPS Logo - 2021 - Small.png" alt="Chicagoland Plumbing Services, Inc."></div> <div class="hamburger-menu" > <button x-on:click="active = !active" x-bind:class="active === true ? 'is-active' : ''" class="hamburger hamburger--squeeze" type="button"> <span class="hamburger-box"> <span class="hamburger-inner"></span> </span> </button> </div> </div> <nav class="dropdown" x-bind:class="active === true ? 'animate-menu_fade_in' : 'animate-menu_fade_out invisible'"> <ul> <li><a href="#">Services</a></li> <li><a href="">Service</a></li> <li><a href="">About Us</a></li> <li><a href="">Specials</a></li> </ul> </nav> </header> -->
 {# 
 
 <header x-data="{scrollAtTop: true, scrollPos: 0, active: false, windowSize: 0 }" 
@@ -74,47 +54,102 @@
 </header>
  #}
 
-
-
-
-
- 
-
 <header class="animate-menu_reveal">
-    <nav>
-        <div class="hamburger-menu" >
-            <button type="button">
+
+    
+
+    <nav 
+        x-data="{mobileIsOpen: false, mobileDropDown: false, windowWidth: 0, isMobile: false}" 
+        x-on:load.window="isMobile = window.innerWidth < 1024 ? true : false" 
+        x-on:resize.window="isMobile = window.innerWidth < 1024 ? true : false">
+
+        <div class="hamburger-menu">
+            <button 
+                type="button" 
+                class="hamburger hamburger--squeeze" 
+                @click="mobileIsOpen = !mobileIsOpen" 
+                x-bind:class="{'is-active': mobileIsOpen}">
+
                 <span class="hamburger-box">
                     <span class="hamburger-inner"></span>
                 </span>
-            </button>  
+            </button>
         </div>
         <div class="logo"><img src="/static/img/CPS_Site_Logo.png" alt="Chicagoland Plumbing Services, Inc."></div>
         <div class="upperNav">
-            <div class="hours"><i class="far fa-clock"></i> 24 Hour Emergency Service</div>
+            <div class="hours">
+                <i class="far fa-clock"></i>
+                24 Hour Emergency Service</div>
             <div class="phoneNumbers">
-                <i class="fas fa-mobile-alt"></i> 708-428-4600  |  815-463-1900</div>
+                <i class="fas fa-mobile-alt"></i>
+                708-428-4600 | 815-463-1900</div>
         </div>
-        <div class="" >
-                
+        <div 
+            id="control" 
+            x-show="mobileIsOpen || !isMobile" 
+            x-transition:enter="animate-slide_in_right"
+            x-transition:leave="animate-slide_out_right"
+            class="lowerNav onLoad" >
+
             <ul class="navigation">
-                <li>
-                    <a href="#"><i class="fas fa-wrench"></i><div>Services</div></a>
+                <li @click="mobileDropDown = !mobileDropDown">
+                    <a href="#">
+                        <i class="fas fa-wrench"></i>
+                        <div>Services</div>
+                    </a>
                     <div class="upArrow"></div>
-                    <ul class="subMenu" >
-                        <li><a href="#"><div>Sub Menu Item 1</div></a></li>
-                        <li><a href=""><div>Sub Menu Item 2</div></a></li>
-                        <li><a href=""><div>Sub Menu Item 3</div></a></li>
-                        <li><a href=""><div>Sub Menu Item 4</div></a></li>
+                    <ul x-show="mobileDropDown || !isMobile" class="subMenu">
+                        <li>
+                            <a href="#">
+                                <div>Sub Menu Item 1</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div>Sub Menu Item 2</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div>Sub Menu Item 3</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div>Sub Menu Item 4</div>
+                            </a>
+                        </li>
                     </ul>
                 </li>
-                <li><a href="#"><i class="fas fa-users"></i><div>About</div></a></li>
-                <li><a href="#"><i class="fas fa-tag"></i><div>Specials</div></a></li>
-                <li><a href="#"><i class="far fa-newspaper"></i><div>Articles</div></a></li>
-                <li><a href="#"><i class="far fa-calendar-plus"></i><div>Schedule Service</div></a></li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-users"></i>
+                        <div>About</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-tag"></i>
+                        <div>Specials</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-newspaper"></i>
+                        <div>Articles</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="far fa-calendar-plus"></i>
+                        <div>Schedule Service</div>
+                    </a>
+                </li>
             </ul>
         </div>
-        
-        
+        <script type="text/javascript">
+          
+                setTimeout(function(){document.getElementById("control").classList.remove('onLoad');}, 800);
+        </script>
     </nav>
 </header>

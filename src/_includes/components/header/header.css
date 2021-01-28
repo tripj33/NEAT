@@ -46,7 +46,12 @@
 
 } */
 
-@media screen and (max-width: 1023px){
+
+
+
+
+/*  */
+
     header{
         @apply bg-cps-blue;
         position: fixed;
@@ -90,9 +95,11 @@
         .upperNav{
             @apply hidden;
         }
-
+        .onLoad{
+            display: none !important;
+        }
         .lowerNav{
-            @apply absolute flex flex-col py-8 bg-cps-blue text-white top-16 right-0 w-3/5 shadow-xl bg-cps-blue;
+            @apply absolute flex flex-col py-8 bg-cps-blue text-white top-16 right-0 w-9/12 shadow-xl bg-cps-blue;
             height: calc(100vh - 4rem);
             /* background: rgb(3,92,191);
             background: -moz-linear-gradient(348deg, rgba(3,92,191,1) 0%, rgba(12,53,86,1) 85%);
@@ -116,10 +123,12 @@
 
                 
                     ul{
+                        @apply bg-cps-blue;
                         li{
                             @apply flex flex-col bg-cps-blue;
+                            border-bottom: 0px;
                             a{
-                                 @apply w-full flex ml-12 p-4 bg-gray-200 border-b border-gray-100;
+                                 @apply w-full flex ml-12 p-4 bg-gray-200 border-b-0 border-gray-300;
 
                                 div{
                                     @apply flex w-full;
@@ -135,8 +144,25 @@
         }
     }
 }
-}
 
+@media screen and (min-width: 640px){
+    header{
+        nav{
+            .lowerNav{
+                @apply w-6/12
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px){
+    header{
+        nav{
+            .lowerNav{
+                @apply w-5/12
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 1024px){
 
@@ -212,8 +238,9 @@
                         px-4
                         h-full
                         content-center
-                        justify-center
+                        justify-around
                         items-center
+                        w-full
                         flex;
                     
                     li{
