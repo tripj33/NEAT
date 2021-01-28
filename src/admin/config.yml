@@ -38,8 +38,9 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Page URL", name: "slug", widget: "string"}
       - { label: "Snippet", name: "snippet", widget: "string"}
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Description", name: "description", widget: "markdown"}
       - { label: "Service Images", name: "image", widget: "image"}
+      - { label: "What This Service Includes", name: "serviceIncludes", widget: "list", label_singular: "Add Service Feature", collapsed: "true"}
       - { label: "Body", name: "body", widget: "markdown"}
   
 
