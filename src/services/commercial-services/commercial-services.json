@@ -1,3 +1,6 @@
 {
-    "layout": "services"
+    "layout": "services",
+    "tags": [
+        "commercialServices"
+    ]
 }

@@ -1,8 +1,10 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy",
+    "start": "npm-run-all --parallel css combinejs eleventy",
+    "backend": "npx netlify-cms-proxy-server",
     "eleventy": "eleventy --watch --serve",
     "debug": "set DEBUG=* & eleventy",
+    "combinejs": "bundle-js ./src/static/js/components.js --o ./_site/static/js/components.js",
     "watch:css": "watch \"npm run css\" ./src",
     "css": "postcss --verbose src/static/css/tailwind.css --o _site/static/css/style.css --watch",
     "watch": "nodemon --watch ./src --ext css --exec npm run css",
@@ -15,6 +17,7 @@
     "alpinejs": "^2.6.0",
     "cross-env": "^7.0.2",
     "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
     "html-minifier": "^4.0.0",
     "js-yaml": "^3.14.0",
     "luxon": "^1.25.0",
@@ -24,12 +27,23 @@
     "tailwindcss": "^2.0.2"
   },
   "dependencies": {
+    "@11ty/eleventy-img": "^0.7.8",
     "@fortawesome/fontawesome-free": "^5.15.2",
-    "autoprefixer": "^10.1.0",
+    "@navillus/eleventy-plugin-image": "^1.0.11",
+    "algoliasearch": "^4.8.4",
+    "autoprefixer": "^10.2.4",
+    "bundle-js": "^1.0.3",
+    "eleventy-plugin-local-respimg": "^0.4.0",
+    "eleventy-plugin-responsive-picture": "^1.0.0",
+    "eleventy-plugin-sharp": "0.0.3",
+    "eleventy-plugin-sharp-respimg": "^1.1.5",
+    "eleventy-plugin-srcset": "^0.1.19",
+    "jsdom": "^16.4.0",
     "nodemon": "^2.0.7",
     "postcss": "^8.2.1",
     "postcss-import": "^14.0.0",
     "postcss-nested": "^5.0.3",
+    "sharp": "^0.27.1",
     "watch": "^1.0.2"
   }
 }

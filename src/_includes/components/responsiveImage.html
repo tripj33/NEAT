@@ -1,0 +1,17 @@
+{%macro respImg(imgURL, pictureAtr, imgAtr)%}
+{% set image = imageURL | sharp %}
+<picture {{ pictureAtr }}>
+    <source srcset="{% getUrl image | resize({ width: 640}) %} 640w">
+    <source srcset="{% getUrl image | resize({ width: 768}) %} 768w">    
+    <source srcset="{% getUrl image | resize({ width: 1024}) %} 1024w">   
+    <source srcset="{% getUrl image | resize({ width: 1280}) %} 1280w">   
+    <source srcset="{% getUrl image | resize({ width: 1536}) %} 1536w">   
+
+    <img {{ imgAtr }} 
+    srcset="{% getUrl image | resize({ width: 640}) %} 640w, 
+            {% getUrl image | resize({ width: 768}) %} 768w,
+            {% getUrl image | resize({ width: 1024}) %} 1024w,
+            {% getUrl image | resize({ width: 1280}) %} 1280w,
+            {% getUrl image | resize({ width: 1536}) %} 1536w">
+</picture>
+{%endmacro%}

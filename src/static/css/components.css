@@ -3,3 +3,6 @@
 @import "../../_includes/components/header/header.css";
 @import "../../_includes/components/header/hamburger.css";
 @import "../../_includes/services.css";
+@import "../../_includes/components/sliderCards/sliderCards.css";
+@import "../../services/services-layout.css";
+@import "../../services/commercial-services/commercial-services-layout.css";

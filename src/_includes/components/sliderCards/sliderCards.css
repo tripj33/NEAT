@@ -1,0 +1,283 @@
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    100% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+  }
+  @keyframes scale-up-center-reverse {
+    0% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes scale-up-center-reverse {
+    0% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-40px);
+      transform: translateY(-40px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-40px);
+      transform: translateY(-40px);
+    }
+  }
+  @-webkit-keyframes slide-top-reverse {
+    0% {
+      -webkit-transform: translateY(-40px);
+      transform: translateY(-40px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes slide-top-reverse {
+    0% {
+      -webkit-transform: translateY(-40px);
+      transform: translateY(-40px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  /* .sliderCards {
+    overflow-x: scroll;
+    white-space: nowrap;
+    cursor: grab;
+    width: 90%;
+    scroll-snap-stop: x proximity;
+  
+    &:active {
+      cursor: grabbing;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      background-color: #fff;
+    }
+    &::-webkit-scrollbar {
+      height: 8px;
+      background-color: #fff;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      background: #e76f47;
+    }
+  
+    .sliderCard {
+      scroll-snap-align: center;
+      scroll-snap-stop: normal;
+      -webkit-animation: scale-up-center-reverse 0.2s
+        cubic-bezier(0.39, 0.575, 0.565, 1) both;
+      animation: scale-up-center-reverse 0.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+        both;
+  
+      img {
+        height: 450px;
+        width: 375px !important;
+      }
+  
+      .sliderCardInfo {
+        margin: -80px 10% 0 10%;
+        -webkit-animation: slide-top-reverse 0.25scubic-bezier(
+            0.25,
+            0.46,
+            0.45,
+            0.94
+          )
+          both;
+        animation: slide-top-reverse 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+          both;
+  
+        svg {
+          height: 50px;
+          width: 50px;
+        }
+      }
+  
+      &:hover {
+        -webkit-animation: scale-up-center 0.2s
+          cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        animation: scale-up-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  
+        .sliderCardInfo {
+          -webkit-animation: slide-top 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+            both;
+          animation: slide-top 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  
+          svg {
+            fill: #e76f47;
+          }
+        }
+      }
+    }
+  } */
+
+.sliderCards__container{
+    @apply container m-auto;
+    .sliderCardButtons{
+        @apply
+            flex
+            w-full
+            justify-end;
+        button{
+            @apply
+            py-2 
+            px-4 
+            flex 
+            justify-center 
+            items-center  
+            bg-cps-blue 
+            hover:bg-cps-blue-light 
+            focus:ring-blue-500 
+            focus:ring-offset-blue-200
+            text-white 
+            transition 
+            ease-in 
+            duration-200 
+            text-center 
+            text-base 
+            font-semibold 
+            shadow-md 
+            focus:outline-none 
+            focus:ring-2 
+            focus:ring-offset-2  
+            w-12 
+            h-12 
+            mx-2
+            rounded-lg;
+
+            i{
+                pointer-events: none;
+            }
+        }
+    }
+
+    .sliderCards{
+        @apply
+            flex
+            py-8
+            px-2
+            mt-4
+            bg-gray-50
+            w-auto
+            overflow-scroll
+            shadow-inner 
+            rounded;
+            overflow-y: hidden;
+            scroll-behavior:smooth;
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+            scrollbar-width: none;  /* Firefox */
+
+        &::-webkit-scrollbar { 
+            display: none;  /* Safari and Chrome */
+        }
+
+
+
+        &.active{
+            cursor: grabbing;
+            
+            cursor: -webkit-grabbing;
+            transform: scale(1);
+        }
+    
+            .sliderCard{
+                @apply
+                    flex
+                    flex-col
+                    rounded-lg
+                    shadow-lg
+                    bg-white
+                    h-60
+                    /* min-w-80 */
+                    mr-4
+                    w-80;
+                    min-width: 20rem;
+    
+                
+    
+                img{
+                    @apply
+                        w-full
+                        h-40
+                        rounded-t-lg;
+                }
+                .title{
+                    @apply
+                    flex
+                    items-center
+                    justify-center;
+    
+                   .right{
+                        @apply
+                        flex
+                        items-center
+                        justify-center
+                        m-2
+                        w-1/12;
+    
+                        i{
+                            @apply
+                                text-cps-blue
+                                text-lg
+                                bg-gray-200
+                                rounded;
+                                padding: 4px 6px 4px 10px;
+                        }
+                    }
+    
+                   .left{
+                    @apply
+                    w-11/12
+                    capitalize
+                    font-medium
+                    h-20
+                    ml-2
+                    flex
+                    items-center;
+                    }
+                }
+            }
+    
+    }
+}

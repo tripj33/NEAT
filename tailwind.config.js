@@ -342,9 +342,11 @@ module.exports = {
         },
         cps: {
           'orange': '#e05826',
-          'orange-dark': '#dc5022',
+          'orange-light': '#ee5f2b',
+          'orange-dark': '#d25123',
           'blue': '#0c3556',
-          'blue-dark': '#0a304f'
+          'blue-light': '#103e63',
+          'blue-dark': '#0b243e'
         }
       },
       spacing: {

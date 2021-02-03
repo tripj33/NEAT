@@ -7,7 +7,7 @@ layout: default
 
 
 
-<div class="service">
+<div class="service" #="frame">
     <div class="service-left">
         <div class="service-image">
             <img src="{{image}}" alt="">
@@ -28,18 +28,15 @@ layout: default
         </div>
         
         <div class="service-icons">
-            <div class="icon">
-                <i class="fal fa-lightbulb-dollar"></i>
-                <div class="title">Energy Efficient</div>
-            </div>
-            <div class="icon">
-                <i class="fad fa-check"></i>
-                <div class="title">3 Year Warranty</div>
-            </div>
-            <div class="icon">
-                <i class="fad fa-rabbit"></i>
-                <div class="title">Quick Installation</div>
-            </div>
+            <!-- {{icons}} -->
+            {% for icon in serviceIcons %}
+                <div class="icon">
+                    <div class="icon">
+                        <i class="{{icon.serviceIcon}}"></i>
+                    </div>
+                    <div class="title">{{icon.iconTitle}}</div>
+                </div>
+            {%endfor%}
         </div>
         <div class="service-description">
             <div class="service-description-info">
@@ -49,24 +46,9 @@ layout: default
                 </div>
                 <h4>What This Service Includes:</h4>
                 <ul>
-                    <li>This is something that will be included.</li>
-                    <li>Another things that is included with this service is this thing</li>
-                    <li>What you get here is that last item that you will likely receive.</li>
-                    <li>This is something that will be included.</li>
-                    <li>Another things that is included with this service is this thing</li>
-                    <li>What you get here is that last item that you will likely receive.</li>
-                    <li>This is something that will be included.</li>
-                    <li>Another things that is included with this service is this thing</li>
-                    <li>What you get here is that last item that you will likely receive.</li>
-                    <li>This is something that will be included.</li>
-                    <li>Another things that is included with this service is this thing</li>
-                    <li>What you get here is that last item that you will likely receive.</li>
-                    <li>This is something that will be included.</li>
-                    <li>Another things that is included with this service is this thing</li>
-                    <li>What you get here is that last item that you will likely receive.</li>
-                    <li>This is something that will be included.</li>
-                    <li>Another things that is included with this service is this thing</li>
-                    <li>What you get here is that last item that you will likely receive.</li>
+                   {% for feature in serviceIncludes %}
+                        <li>{{feature.serviceFeature}}</li>
+                   {% endfor %}
                 </ul>
             </div>
         </div>

@@ -25,10 +25,9 @@ prism: true
        <div class="sidebar">
            Quick Links
            <ul>
-               <li><a href="#">This is the Title of the First Header</a></li>
-               <li><a href="#">A Second Title Might Look Like this</a></li>
-               <li><a href="#">One Might Be Short</a></li>
-               <li><a href="#">And One Might be Even Longer Than all The other titles.</a></li>
+               {%for section in articleSection%}
+               <li><a href="#{{section.sectionLink}}" class="scroll">{{section.sectionName}}</a></li>
+               {%endfor%}
            </ul>
        </div>
     </aside>
@@ -44,16 +43,13 @@ prism: true
             </div>
             </div>
             <div class="article-post_content">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dui id ornare arcu odio ut sem nulla. Ipsum dolor sit amet consectetur adipiscing elit. Dignissim convallis aenean et tortor. Curabitur vitae nunc sed velit. Porttitor eget dolor morbi non arcu risus quis varius quam. Nibh tellus molestie nunc non blandit. Sed vulputate odio ut enim blandit volutpat. Risus quis varius quam quisque. Magna eget est lorem ipsum dolor.</p>
-            <p>In est ante in nibh mauris cursus. Euismod elementum nisi quis eleifend quam. Est ullamcorper eget nulla facilisi. A condimentum vitae sapien pellentesque habitant morbi. Enim nunc faucibus a pellentesque sit amet porttitor eget. At urna condimentum mattis pellentesque id. A pellentesque sit amet porttitor eget dolor morbi non arcu. Cursus euismod quis viverra nibh cras pulvinar mattis. Sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Vestibulum morbi blandit cursus risus at ultrices. Sagittis eu volutpat odio facilisis mauris sit amet. Tellus orci ac auctor augue mauris. Nunc id cursus metus aliquam eleifend mi.</p>
-            <p>
-            Ut aliquam purus sit amet luctus venenatis. Bibendum enim facilisis gravida neque. Pellentesque habitant morbi tristique senectus et netus. Cras ornare arcu dui vivamus arcu felis bibendum. Pulvinar neque laoreet suspendisse interdum. Egestas sed tempus urna et pharetra pharetra. Cras ornare arcu dui vivamus arcu felis bibendum ut. In fermentum posuere urna nec tincidunt. Ultrices gravida dictum fusce ut placerat orci. Libero enim sed faucibus turpis in eu mi bibendum. Vestibulum sed arcu non odio euismod lacinia at quis. Aliquam eleifend mi in nulla posuere sollicitudin. Purus sit amet volutpat consequat mauris nunc congue nisi. Id porta nibh venenatis cras sed felis eget velit aliquet. Eu scelerisque felis imperdiet proin fermentum leo vel orci. Risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Lorem mollis aliquam ut porttitor leo a diam sollicitudin.
-            </p>
-
-            <p>Aliquam nulla facilisi cras fermentum odio eu. Egestas tellus rutrum tellus pellentesque. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus. Tellus cras adipiscing enim eu turpis egestas pretium aenean pharetra. Facilisis leo vel fringilla est. Quisque egestas diam in arcu cursus euismod. Dignissim suspendisse in est ante in nibh mauris. Sodales ut eu sem integer vitae. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Nunc faucibus a pellentesque sit amet porttitor. Iaculis urna id volutpat lacus laoreet. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Tellus rutrum tellus pellentesque eu. Volutpat ac tincidunt vitae semper quis. Lacus vel facilisis volutpat est velit egestas. Maecenas sed enim ut sem. Tristique sollicitudin nibh sit amet. Sit amet mattis vulputate enim. Id leo in vitae turpis massa sed elementum tempus egestas.</p>
-
-            <p>Massa massa ultricies mi quis hendrerit dolor magna. Tellus mauris a diam maecenas sed enim. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Dictum non consectetur a erat nam at lectus urna. Diam maecenas ultricies mi eget mauris pharetra et. Dolor sed viverra ipsum nunc aliquet bibendum enim. Aliquam sem et tortor consequat id porta nibh venenatis. Nulla malesuada pellentesque elit eget. Morbi leo urna molestie at elementum eu facilisis sed. Consectetur adipiscing elit ut aliquam. Auctor neque vitae tempus quam. Eros in cursus turpis massa tincidunt. Libero volutpat sed cras ornare arcu dui vivamus. Sit amet facilisis magna etiam tempor. Facilisis magna etiam tempor orci. Faucibus et molestie ac feugiat sed lectus. Ultrices gravida dictum fusce ut. In cursus turpis massa tincidunt. Euismod in pellentesque massa placerat duis ultricies lacus sed.</p>
-            {{ content | safe }}
+                {{intro}}
+            {%for section in articleSection%}
+                <section>
+                    <h4 id="#{{section.sectionLink}}">{{section.sectionName}}</a></h4>
+                    <p>{{section.sectionContent}}</p>
+                </section>
+            {%endfor%}
             </div>
         </div>
     </article>
@@ -81,4 +77,33 @@ prism: true
             </li>
        </ul>
     </aside>
+    <script>
+        (function() {
+            scrollTo();
+        })();
+        
+        function scrollTo() {
+            const links = document.querySelectorAll('.scroll');
+            links.forEach(each => (each.onclick = scrollAnchors));
+        }
+        
+        function scrollAnchors(e, respond = null) {
+            const distanceToTop = el => Math.floor(el.getBoundingClientRect().top);
+            e.preventDefault();
+            var targetID = (respond) ? respond.getAttribute('href') : this.getAttribute('href');
+            const targetAnchor = document.querySelector(targetID);
+            if (!targetAnchor) return;
+            const originalTop = distanceToTop(targetAnchor);
+            window.scrollBy({ top: originalTop, left: 0, behavior: 'smooth' });
+            const checkIfDone = setInterval(function() {
+                const atBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight - 2;
+                if (distanceToTop(targetAnchor) === 0 || atBottom) {
+                    targetAnchor.tabIndex = '-1';
+                    targetAnchor.focus();
+                    window.history.pushState('', '', targetID);
+                    clearInterval(checkIfDone);
+                }
+            }, 100);
+        }
+    </script>
 </main>

@@ -1,0 +1,83 @@
+.serviceTitle{
+    @apply 
+        flex
+        flex-col
+        justify-center
+        mx-4
+        my-12;
+
+    h1{
+        @apply
+            text-cps-blue
+            text-3xl
+            font-bold
+            uppercase;
+    }
+    p{
+        @apply
+            text-gray-700
+            mx-6;
+    }
+}
+
+.serviceSection{
+    @apply 
+        flex
+        justify-center
+        text-cps-blue
+        items-stretch
+        justify-items-stretch
+        bg-white
+        m-4
+        border-gray-50;
+
+    .serviceSection__iconContainer{
+        @apply w-1/5 flex self-stretch flex-wrap;
+        .serviceSection__icon{
+            @apply
+                flex
+                justify-center
+                text-white
+                bg-cps-blue
+                text-3xl
+                rounded-full
+                w-16
+                h-16
+                items-center
+                mx-auto;
+                position: sticky;
+                top: 120px;
+    
+            i{
+                @apply
+                    flex;
+            }
+        }
+    }
+
+    .serviceSection__content{
+        @apply 
+            w-4/5
+            px-4;
+
+        .serviceSection__title{
+            @apply pb-2;
+            h2{
+                @apply
+                    font-semibold
+                    text-xl
+                    uppercase;
+            }
+        }
+    
+        .serviceSection__subTitle{
+            p{
+                @apply
+                    text-sm
+                    text-gray-700
+                
+            }
+        }
+    }
+}
+

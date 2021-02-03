@@ -2,11 +2,79 @@
 layout: default
 ---
 
-<section class="mt-15">
-    {% set postslist = collections.post %}
 
-    {% for post in postslist | reverse %}
+    {% from "../_includes/components/sliderCards/sliderCards.html" import sliderCards %}
+    
+<section class="serviceTitle">
+    <h1>Plumbing Services</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</section>
+
+    <section class="serviceSection">
+        <div class="serviceSection__iconContainer">         
+            <div class="serviceSection__icon">
+                <i class="fad fa-home-lg-alt"></i>
+            </div>
+        </div>
+        <div class="serviceSection__content">
+            <div class="serviceSection__title">
+                <h2>
+                    Residential Services
+                </h2>
+            </div>
+            <div class="serviceSection__subTitle">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </section>
+
+    {{sliderCards(collections.residentialServices, "residential-services")}}
+
+    <section class="serviceSection">
+        <div class="serviceSection__iconContainer">         
+            <div class="serviceSection__icon">
+                <i class="fad fa-city"></i>
+            </div>
+        </div>
+        <div class="serviceSection__content">
+            <div class="serviceSection__title">
+                <h2>
+                    Commercial Services
+                </h2>
+            </div>
+            <div class="serviceSection__subTitle">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </section>
+    {{sliderCards(collections.commercialServices, "commercial-services")}}
+
+
+    <section class="serviceSection">
+        <div class="serviceSection__iconContainer">         
+            <div class="serviceSection__icon">
+                <i class="fad fa-user-hard-hat"></i>
+            </div>
+        </div>
+        <div class="serviceSection__content">
+            <div class="serviceSection__title">
+                <h2>
+                    New Construction Services
+                </h2>
+            </div>
+            <div class="serviceSection__subTitle">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </div>
+    </section>
+    {{sliderCards(collections.newConstructionServices, "new-construction-services")}}
+
+    <!-- {% set postslist = collections.post %} -->
+
+
+    <!-- {% for post in commercialServices | reverse %}
         <article class="my-8">
+            <h2>{{commercialServices}}</h2>
             <h2 class="font-bold text-3xl text-gray-900 mb-2">
                 <a href="{{ post.url | url }}">
                     {% if post.data.title %}
@@ -37,5 +105,5 @@ layout: default
             </p>
 
         </article>
-    {% endfor %}
+    {% endfor %} -->
 </section>

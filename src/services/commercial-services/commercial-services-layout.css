@@ -1,0 +1,180 @@
+
+
+
+.searchWidget{
+    @apply
+        container 
+        mx-auto
+        bg-gray-300;
+
+        .searchWidget__input{
+            @apply
+                -mt-8
+                h-28
+                flex
+                items-end
+                p-4
+                pt-6
+                bg-white
+                fixed
+                shadow
+                z-10
+                w-full;
+            input{
+                @apply
+                    block
+                    w-full
+                    bg-gray-200
+                    focus:outline-none 
+                    focus:bg-white 
+                    focus:shadow 
+                    text-gray-700 
+                    font-bold 
+                    rounded-lg 
+                    px-4 
+                    py-3;
+            }
+        }
+        
+        .searchWidget__results{
+            @apply
+                grid 
+                grid-cols-1 
+                md:grid-cols-2 
+                lg:grid-cols-3
+                xl:grid-cols-4
+                pt-24;
+
+            template{}
+
+                a{
+
+                    .searchWidget__results__card{
+                        @apply
+                        pointer-events-none
+                        flex 
+                        items-center 
+                        shadow 
+                        mx-4
+                        my-2
+                        bg-white
+                        hover:shadow-lg 
+                        rounded-lg
+                        transition 
+                        duration-150 
+                        ease-in-out 
+                        transform 
+                        hover:scale-105;
+
+                        &::after{
+                            @apply
+                                pb-2
+                                flex
+                                justify-center
+                                items-center
+                                rounded-l-lg
+                                text-cps-blue
+                                bg-gray-200
+                                shadow-inner
+                                pointer-events-none
+                                p-2;
+                                font-family: 'Font Awesome 5 Pro';
+                                content:'\f054';
+                                font-weight: 900;
+                            
+                        }
+
+                            img{
+                                @apply
+                                rounded-l-lg
+                                w-1/4 
+                                bg-white
+                                h-24
+                                pointer-events-none;
+                            }
+                        
+
+                        .searchWidget__results__card__title{
+                            @apply
+                                px-4
+                                py-2
+                                w-3/4
+                                font-semibold
+                                capitalize
+                                h-24
+                                flex
+                                items-center
+                                justify-items-center
+                                flex-col
+                                pointer-events-none;
+                            
+                            p.title{
+                                @apply
+                                text-cps-blue
+                                leading-none
+                                flex-grow
+                                flex
+                                justify-self-center
+                                w-full
+                                items-center
+                                place-self-center
+                                pointer-events-none;
+                            }
+                            p.subTitle{
+                                @apply
+                                text-cps-orange
+                                text-sm
+                                font-light
+                                pb-2
+                                w-full
+                                pointer-events-none;
+                            }
+                        }
+
+                        .searchWidget__results__card__snippet{
+                            
+                        }
+                    }
+                }
+            
+        }
+}
+
+@media (min-width: 1024px) { 
+    .searchWidget{
+        @apply
+            mt-4;
+        .searchWidget__input{
+            @apply
+                mt-0
+                pt-4
+                relative;
+        }
+        .searchWidget__results{
+            @apply
+                py-4;
+            a{
+                .searchWidget__results__card{
+                    @apply
+                        flex-col;
+                    &::after{
+                        display:none;
+                    }
+
+                    img{
+                        @apply
+                            h-48
+                            w-full
+                            rounded-bl-none
+                            rounded-tr-lg
+                            shadow-lg;
+                    }
+                    .searchWidget__results__card__title{
+                        @apply
+                            w-full;
+                    }
+                }
+            }
+        }
+    }
+ }

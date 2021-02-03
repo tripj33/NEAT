@@ -1,0 +1,76 @@
+{% macro sliderCards(collectionName, subDomain)%}
+
+
+{% set collection = collectionName %}
+
+
+<div class="sliderCards__container">
+  <div class="sliderCardButtons">
+    
+    <button class="testButton" data-scroll="right" onclick="scrollCards(event)"><i class="fad fa-arrow-left"></i></button>
+    <button class="testButton" data-scroll="left" onclick="scrollCards(event)"><i class="fad fa-arrow-right"></i></button>
+  </div>
+
+  <section class="sliderCards">
+    {%for card in collection%}
+    <a href=".{%if subDomain%}/{{subDomain}}{%endif%}/{{card.data.slug}}">
+      <div class="sliderCard">
+        <img src="{{card.data.image}}" alt="">
+        <div class="title">
+          <div class="left">
+            {{card.data.title}}
+          </div>
+          <div class="right">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+        </div>
+      </div>
+    </a>
+    {%endfor%}
+
+    
+  </section>
+</div>
+
+<!-- <script>
+  // function scrollCardsLeft(e){
+  //   let target = e.target; 
+  //   let cardWrapper = target.nextSibling;
+  //   let cardWrapperWidth = cardWrapper.scrollWidth;
+  //   let sliderCard = cardWrapper.firstChild;
+  //   let sliderCardWidth = sliderCard.offsetWidth;
+  //   let sliderCardMargin = window.getComputedStyle(sliderCard).getPropertyValue("margin-right"); 
+  //   sliderCardMargin = sliderCardMargin.match(/\d+/)[0];
+
+  //   let sliderCardFullWidth = parseInt(sliderCardWidth) + parseInt(sliderCardMargin);
+
+  //   cardWrapper.scrollLeft += sliderCardFullWidth
+  //   console.log(sliderCardFullWidth)
+
+  // }
+
+  function scrollCards(e){
+    let target = e.target; 
+    let cardWrapper = target.parentNode.nextSibling;
+    let cardWrapperWidth = cardWrapper.scrollWidth;
+    let sliderCard = cardWrapper.firstChild;
+    let sliderCardWidth = sliderCard.offsetWidth;
+    let sliderCardMargin = window.getComputedStyle(sliderCard).getPropertyValue("margin-right"); 
+    sliderCardMargin = sliderCardMargin.match(/\d+/)[0];
+
+    console.log(target.dataset.scroll)
+
+    let sliderCardFullWidth = parseInt(sliderCardWidth) + parseInt(sliderCardMargin);
+
+    if(target.dataset.scroll === "left"){
+      cardWrapper.scrollLeft += sliderCardFullWidth
+      console.log("scrool-left")
+    }else{
+      cardWrapper.scrollLeft -= sliderCardFullWidth
+      console.log("scrool-right");
+    }
+
+  }
+  
+</script> -->
+{%endmacro%}

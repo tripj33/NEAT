@@ -1,0 +1,8 @@
+{%macro iconButton(background, hover, ring, data, icon) %}
+    
+<button type="button" class="iconButton bg-{{background}} hover:bg-{{hover}} focus:ring-{{ring}}" {{data}}>
+    {{icon}}
+</button>
+
+
+{%endmacro%}

@@ -1,0 +1,84 @@
+---
+layout: default
+---
+    <section class="servicePage__intro">
+           </section>
+    <div class="searchWidget" x-data="loadServices()">
+        <div class="searchWidget__input">
+            <input
+            x-ref="searchField"
+            x-model="search"
+            x-on:keydown.window.prevent.slash="$refs.searchField.focus()"
+            placeholder="Find a service..."
+            type="search"
+            />
+        </div>
+        <div class="searchWidget__results">
+          <template x-for="item in filteredServices" :key="item">
+            <a >
+              <div
+              class="searchWidget__results__card"
+            >
+              <img
+                :src="`${item.service_image}`"
+              />
+              <div class="searchWidget__results__card__title">
+                <p
+                class="title"
+                x-text="item.service_name"
+              ></p>
+                <p
+                class="subTitle"> 
+                    Commercial Service
+                </p>
+                
+              </div>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+      <!-- <img class="resp" src="/commercial-plumbing.jpg"> -->
+          <script>
+      function loadServices() {
+        return {
+          search: "",
+          myForData: sourceData,
+          get filteredServices() {
+            if (this.search === "") {
+              return this.myForData;
+            }
+            return this.myForData.filter((item) => {
+              return item.service_snippet.toLowerCase().includes(this.search.toLowerCase()) 
+              || item.service_tag.toLowerCase().includes(this.search.toLowerCase())
+              || item.service_name.toLowerCase().includes(this.search.toLowerCase());
+            });
+          },
+        };
+      }
+
+
+      function getLink(){
+          return{
+              get linkGetter(){
+                 let href = this.getAttribute("href");
+                 return href;
+              }
+          }
+          console.log("Function ran")
+      }
+      var sourceData = [
+       
+      {% for service in collections.commercialServices %}
+
+    {
+       service_name: "{{service.data.title}}",
+       service_snippet: "{{service.data.snippet}}",
+       service_image: "{{service.data.image}}",
+       service_link: "{{service.data.slug}}",
+       service_tag: "{{service.data.tag}}"
+     },
+     {%endfor%}
+
+      ];
+    </script>
